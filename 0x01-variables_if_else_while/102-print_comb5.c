@@ -6,38 +6,27 @@
  */
 int main(void)
 {
-	int i;
-	int j;
-	int m;
-	int n;
+	int i,j;
 
-	for (i = '0'; i <= '9'; i++) /*print first two digit combo*/
+	for (i = 0; i < 100; i++) /*print first two digit combo*/
 	{
-		for (j = '0'; j <= '9'; j++)
-		{
-			for (m = i; m <= '9'; m++) /*print second digit combo*/
+		for (j = 0; j < 100; j++) /*print second digit combo*/
 			{
-				for (n = (j + 1); n <= '9'; n++)
+				if (i < j)
 				{
-					putchar(i);
-					putchar(j);
-					putchar(' ');
-					putchar(m);
-					putchar(n);
-
-					if ((i != '9' || j != '8')
-					    || (m != '9' || n != '9'))
+					putchar((i / 10) + 48);
+					putchar((i % 10) + 48);
+					putchar (' ');
+					putchar((j / 10) + 48);
+					putchar((j % 10) + 48);
+					if (i != 98 || j!= 99)
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-
-				n = '0';
 			}
-		}
 	}
 	putchar('\n');
-
 	return (0);
 }
