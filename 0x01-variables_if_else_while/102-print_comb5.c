@@ -9,7 +9,7 @@ int main(void)
 	int i;
 	int j;
 	int m;
-	int n = '0';
+	int n;
 
 	for (i = '0'; i <= '9'; i++) /*print first two digit combo*/
 	{
@@ -17,21 +17,20 @@ int main(void)
 		{
 			for (m = i; m <= '9'; m++) /*print second digit combo*/
 			{
-				do {
+				for (n = (j + 1); n <= '9'; n++)
+				{
 					putchar(i);
 					putchar(j);
 					putchar(' ');
 					putchar(m);
 					putchar(n);
 
-					if (!((i == '9' && j == '8') &&
-					      (m == '9' && n == '9')))
+					if ((i != '8' || j != '9'))
 					{
 						putchar(',');
 						putchar(' ');
-						n++;
 					}
-				} while ((n = j + 1));
+				}
 
 				n = '0';
 			}
