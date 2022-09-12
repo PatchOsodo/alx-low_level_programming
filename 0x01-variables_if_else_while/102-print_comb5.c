@@ -17,8 +17,7 @@ int main(void)
 		{
 			for (m = i; m <= '9'; m++) /*print second digit combo*/
 			{
-				do
-				{
+				do {
 					putchar(i);
 					putchar(j);
 					putchar(' ');
@@ -30,10 +29,10 @@ int main(void)
 					{
 						putchar(',');
 						putchar(' ');
+						n++;
 					}
-					n++;
-				}
-				while ((n = j + 1));
+				} while ((n = j + 1));
+
 				n = '0';
 			}
 		}
