@@ -1,0 +1,4 @@
+#!/bin/bash
+echo Enter file name
+read G
+chmod +x $G
