@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * string_toupper - converts a string to uppercase
+ * cap_string - converts first byte of a string to uppercase
  *
  * @s: string to be converted
  *
@@ -15,7 +15,7 @@ char *cap_string(char *s)
 	i = 0;
 
 	if (s[i] <= 'z' && s[i] >= 'a')
-			s[i] = s[i] - 'a' + 'A';
+		s[i] = s[i] - 'a' + 'A';
 
 	i++;
 
