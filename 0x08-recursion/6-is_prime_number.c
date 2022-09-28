@@ -23,12 +23,9 @@ int primnum(int n, int div)
 
 int is_prime_number(int n)
 {
-	int div;
-
-	div = 3;
 	if (n % 2 == 0 || n < 2)
 		return (0);
 	if (n == 2)
 		return (1);
-	return (primnum(n, div));
+	return (primnum(n, 3));
 }
